@@ -3,6 +3,7 @@
 ## Details
 
 **Description**: TBA
+
 **Proposal**: TBA
 
 ## Resources
