@@ -2,7 +2,7 @@
 
 ### Project Proposal 
 
-**Alexandar Mihaylov ()**
+**Alexandar Mihaylov ()**<br>
 **Luisa Rojas-Garcia (100518772)**
 
 ---
