@@ -2,9 +2,15 @@
 
 ## Details
 
-**Description**: TBA
+**Description**:
 
-**Proposal**: TBA
+- Implementing or solving a problem utilizing a learning algorithm:
+	- Present a solution from a new problem.
+	- Present a solution from an already existing paper (e.g. same data, different algorithm).
+
+- Survey paper: Take a particular Software Engineering area (e.g. bug repair, program understanding) and do a survey off this work. This would be a comprehensive review (classification) using ~15 papers to show the understanding of the topics.
+
+**Proposal**: November 9th, 2017
 
 ## Resources
 
@@ -12,15 +18,7 @@
 
 | Description | Link |
 | ----------- | ---- |
-| “A topic-centric list of high-quality open datasets in public domains. By everyone, for everyone!” | https://github.com/caesar0301/awesome-public-datasets |
-| AWS Public Datasets | https://aws.amazon.com/datasets |
-| Tutorial to use the Twitter API to capture tweets | https://www.dataquest.io/blog/streaming-data-python |
-| OpenDataSoft: Datasets already open and ready to use | https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/?sort=code_en |
-| The World Bank DataBank| http://databank.worldbank.org/data/home.aspx |
-| “Kaggle Datasets: The best place to discover and seamlessly analyze open data” | https://www.kaggle.com/datasets |
-| Google BigQuery Public Datasets | https://cloud.google.com/bigquery/public-data |
-| “Data and code behind the stories and interactives at FiveThirtyEight” | https://github.com/fivethirtyeight/data |
-| New York University: "Data for MATLAB Hackers" | http://cs.nyu.edu/~roweis/data.html |
+| A Dataset of High Impact Bugs: Manually-Classified Issue Reports | <ul><li>Paper: http://ieeexplore.ieee.org.uproxy.library.dc-uoit.ca/stamp/stamp.jsp?arnumber=7180132</li><li>Dataset: http://oss.sys.wakayama-u.ac.jp/?p=1009</li></ul> |
 
 ### Machine Learning
 
@@ -29,9 +27,3 @@
 | TensorFlow | https://www.tensorflow.org |
 | Weka | https://www.cs.waikato.ac.nz/ml/weka/index.html |
 | Microsoft Azure Machine Learning Studio | https://studio.azureml.net |
-
-### Other
-
-| Description | Link |
-| ---- | ---- |
-| Kaggle Kernels: ”The best place to explore data science results and share your own work” | https://www.kaggle.com
