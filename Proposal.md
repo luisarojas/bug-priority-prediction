@@ -2,18 +2,35 @@
 
 ### Project Proposal 
 
-**Alexandar Mihaylov ()**<br>
+**Alexandar Mihaylov (100536396)**<br>
 **Luisa Rojas-Garcia (100518772)**
 
 ---
 
 ## Problem Statement
+*Vision - what does the world look like if we solve the problem?*
+Given any high impact bug, identify its priority.
+
+*Issue Statement - one or two sentences that describe the problem using specific issues. It is not a "lack of a solution" statement. For example, our problem is that we don't have an ERP system.*
+Methods in research of Software Engineering focus on predicting, localizing, and triaging bugs, but do not consider the impact of the bugs on the developers and that bugs should weighted differently. We propose a prediction model that will be able to distinguish the different weights of bugs by placing in them in different priority categories:
+Critical
+Blocker
+Major
+Minor
+Trivial
+
+*Method - the process that will get followed to solve the problem. For example, DMAIC or Kaizen.*
+This prediction model will enable developers to handle a given bug and its corresponding priority accordingly. 
 
 ## Motivation
 
 *"Although in the field of Mining Software Repositories (MSR) there are many promising approaches to predicting, localizing, and triaging bugs, most of them do not consider impacts of each bug on users and developers but rather treat all bugs with equal weighting, excepting a few studies on high impact bugs including security, performance, blocking, and so forth."*
 
 ## Method
+The above will be achieved through sentiment analysis on the data, and applying a deep neural network in order to classify the different bugs.
+Firstly all textual attributes will be quantified by applying pre-trained sentiment analysis models.
+Next, feature selection will be applied to reduce the dimensionality of the data.
+Lastly a deep neural network will be trained and tested on the given data to form a prediction model.
 
 ### About The Data
 
