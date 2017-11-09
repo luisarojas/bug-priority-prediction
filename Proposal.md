@@ -39,73 +39,88 @@ We will implement a Deep Neural Network to classify the different types of bugs.
 
 ### About The Data
 
-*"... dataset of <u>high impact bugs</u> which was created by manually reviewing four thousand issue reports in four open source projects (Ambari, Camel, Derby and Wicket)."* *"... where JIRA is used for managing reported issues"*
+We will work with a large dataset of high impact bugs, which was created by manually reviewing four thousand issue reports in four open source projects (Ambari, Camel, Derby and Wicket). The projects were extracted from JIRA, a platform for managing reported issues.
 
-*"These projects were selected because they met the following criteria for our project selection."*
+There are 1000 examples per project; there will be 4000 examples to work with in total.
 
-- *"Target projects have a large number of (at least several thousand) reported issues."*, which enables the use for prediction model building and/or machine learning.
+These projects were selected because they met the following criteria for project selection:
 
-- *"Target projects use JIRA as an issue tracking system."*
+- Target projects have a large number of (at least several thousand) reported issues , which enables the use for prediction model building and/or machine learning.
 
-- *"Target projects are different from each other in application domains."*
+- Target projects use JIRA as an issue tracking system.
 
-> ### Definitions of High Impact Bugs 
+- Target projects are different from each other in application domains.
 
-> #### Process
+<font color=lightgrey>
+### Definitions of High Impact Bugs 
 
-> *"A bug can impact on a bug management process in a project. When an unexpected bug is found in an unexpected component, developers in the projects would need to reschedule task assignments in order to give first priority to fix the newlyfound bug."*
+#### Process
 
-> - **Surprise bugs**:
+*"A bug can impact on a bug management process in a project. When an unexpected bug is found in an unexpected component, developers in the projects would need to reschedule task assignments in order to give first priority to fix the newlyfound bug."*
 
->	- *"It can disturb the workflow and/or task scheduling of developers, since it appears in unexpected timing (e.g., bugs detected in post-release) and locations (e.g., bugs found in files that are rarely changed in pre-release)."*
+- **Surprise bugs**:
+
+	- *"It can disturb the workflow and/or task scheduling of developers, since it appears in unexpected timing (e.g., bugs detected in post-release) and locations (e.g., bugs found in files that are rarely changed in pre-release)."*
 	
->	- *"... the co-changed files and the amount of time between the latest pre-release date for changes and the release date can be good indicators of predicting surprise bugs"*
+	- *"... the co-changed files and the amount of time between the latest pre-release date for changes and the release date can be good indicators of predicting surprise bugs"*
 
-> - **Dormant bugs**: 
+- **Dormant bugs**: 
 	
->	- *"A bug that was introduced in one version (e.g., Version 1.1) of a system, yet it is Not reported until AFTER the next immediate version (i.e., a bug is reported against Version 1.2 or later)."*
+	- *"A bug that was introduced in one version (e.g., Version 1.1) of a system, yet it is Not reported until AFTER the next immediate version (i.e., a bug is reported against Version 1.2 or later)."*
 	
->	- *"... were fixed faster than non-dormant bugs."*
+	- *"... were fixed faster than non-dormant bugs."*
 	
-> - **Blocking bugs**: 
+- **Blocking bugs**: 
 
-> 	- *"... blocks other bugs from being fixed".*
+ 	- *"... blocks other bugs from being fixed".*
 	
-> 	- *"... a fixer needs more time to fix a blocking bug and other developers need to wait for being fixed to fix the dependent bugs."*
+ 	- *"... a fixer needs more time to fix a blocking bug and other developers need to wait for being fixed to fix the dependent bugs."*
 
-> #### Products
+#### Products
 
-> They directly affect user experience and satisfaction with software products.
+They directly affect user experience and satisfaction with software products.
 
-> - **Security bugs**:
+- **Security bugs**:
 	
-> 	- *"... can raise a serious problem which often impacts on uses of software products directly."*
+	- *"... can raise a serious problem which often impacts on uses of software products directly."*
 	
->	- *"In general, security bugs are supposed to be fixed as soon as possible."*
+	- *"In general, security bugs are supposed to be fixed as soon as possible."*
 	
->- **Performance bugs**: 
+- **Performance bugs**: 
 
->	- *"... programming errors that cause significant performance degradation."*
+	- *"... programming errors that cause significant performance degradation."*
 
->	- *"The “performance degradation” contains poor user experience, lazy application responsiveness, lower system throughput, and needles waste of computational resources."*
+	- *"The “performance degradation” contains poor user experience, lazy application responsiveness, lower system throughput, and needles waste of computational resources."*
 
->	- *"... a performance bug needs more time to be fixed than a non-performance bug."*
+	- *"... a performance bug needs more time to be fixed than a non-performance bug."*
 
-> - **Breakage bugs**:
+- **Breakage bugs**:
 
->	- *"A functional bug which is introduced into a product because the source code is modified to add new features or to fix existing bugs."*
+	- *"A functional bug which is introduced into a product because the source code is modified to add new features or to fix existing bugs."*
 
->	- *"A breakage bug causes a problem which makes usable functions in one version unusable after releasing newer versions."*
+	- *"A breakage bug causes a problem which makes usable functions in one version unusable after releasing newer versions."*
 
-> ### Manual Classification
+### Manual Classification
 
-> Surprise and Dormant bugs were automatically labeled using a script since they can be easily detected by definition. As for the rest:
+Surprise and Dormant bugs were automatically labeled using a script since they can be easily detected by definition. As for the rest:
 
-> - For a project, a graduate student reviewed a thousand issue reports and labeled one or more bug types on each issue (i.e., multiple labelling is allowed). Four graduate students participated in this session.
+- For a project, a graduate student reviewed a thousand issue reports and labeled one or more bug types on each issue (i.e., multiple labelling is allowed). Four graduate students participated in this session.
 
-> - *"Four faculty members of the authors independently did the same thing as the students."*
+- *"Four faculty members of the authors independently did the same thing as the students."*
 
-> - *"A student and faculty member who reviewed the same issue reports discussed differences of labeling between them until reaching a common understanding and labeling the same types on a single issue."*
+- *"A student and faculty member who reviewed the same issue reports discussed differences of labeling between them until reaching a common understanding and labeling the same types on a single issue."*
+
+</font>
+
+## Related Work
+
+*Include other work to predict bug priority using this same dataset, then compare with our approach.*
+
+*To do this, look up what research that cites the dataset that predict defect priority with other methods.*
+
+| Paper | Method |
+|-------|--------|
+| [Automated Identification of High Impact Bug Reports Leveraging Imbalanced Learning Strategies](http://ieeexplore.ieee.org.uproxy.library.dc-uoit.ca/stamp/stamp.jsp?arnumber=7552013&tag=1 "Paper") |  Naive Bayes Multinominal
 
 ## References
 

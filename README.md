@@ -4,27 +4,35 @@
 
 **Description**:
 
-- Implementing or solving a problem utilizing a learning algorithm:
-	- Present a solution from a new problem.
-	- Present a solution from an already existing paper (e.g. same data, different algorithm).
+Implementing or solving a problem utilizing a learning algorithm:
 
-- Survey paper: Take a particular Software Engineering area (e.g. bug repair, program understanding) and do a survey off this work. This would be a comprehensive review (classification) using ~15 papers to show the understanding of the topics.
+- Present a solution from a new problem.
+- Present a solution from an already existing paper (e.g. same data, different algorithm).
 
-**Proposal**: November 9th, 2017
+**Proposal**:
+
+- *Presentation*: Due November 9th, 2017
+- *Report*: TBA
 
 ## Resources
 
-### Data Sets
+### Data Set
 
-| Description | Link |
-| ----------- | ---- |
-| A Dataset of High Impact Bugs: Manually-Classified Issue Reports | <ul><li>Paper: http://ieeexplore.ieee.org.uproxy.library.dc-uoit.ca/stamp/stamp.jsp?arnumber=7180132</li><li>Dataset: http://oss.sys.wakayama-u.ac.jp/?p=1009</li></ul> |
-| The JIRA Repository Dataset: Understanding Social Aspects of Software Development | <ul><li>Paper: https://terapromise.csc.ncsu.edu/!/#repo/view/head/social-analysis/social/promise15_jira.pdf</li><li>Dataset: https://terapromise.csc.ncsu.edu/!/#repo/view/head/social-analysis/social/emotion_dataset_jira.sql.tar.gz</li></ul> |
+A Dataset of High Impact Bugs: Manually-Classified Issue Reports
 
-### Machine Learning
+- *Paper*: http://ieeexplore.ieee.org.uproxy.library.dc-uoit.ca/stamp/stamp.jsp?arnumber=7180132
 
-| Tool | Link |
-| ---- | ---- |
-| TensorFlow | https://www.tensorflow.org |
-| Weka | https://www.cs.waikato.ac.nz/ml/weka/index.html |
-| Microsoft Azure Machine Learning Studio | https://studio.azureml.net |
+- *Dataset*: http://oss.sys.wakayama-u.ac.jp/?p=1009
+
+### Machine Learning Tool
+
+* *TensorFlow*: https://www.tensorflow.org
+
+## Comments
+
+Include other work to predict bug priority using this same dataset, then compare with our approach.
+
+- Look up what research cites the MSR 2015 paper & look up papers on predicting defect priority with deep learning/ML.
+
+To take into account: Different projects with different predominant bug priority types may be a pitfall.
+
