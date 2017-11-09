@@ -8,29 +8,34 @@
 ---
 
 ## Problem Statement
-*Vision - what does the world look like if we solve the problem?*
+
 Given any high impact bug, identify its priority.
 
-*Issue Statement - one or two sentences that describe the problem using specific issues. It is not a "lack of a solution" statement. For example, our problem is that we don't have an ERP system.*
-Methods in research of Software Engineering focus on predicting, localizing, and triaging bugs, but do not consider the impact of the bugs on the developers and that bugs should weighted differently. We propose a prediction model that will be able to distinguish the different weights of bugs by placing in them in different priority categories:
-Critical
-Blocker
-Major
-Minor
-Trivial
+Methods in research of Software Engineering focus on predicting, localizing, and triaging bugs, but do not consider their impact or weight on the users and on the developers.
 
-*Method - the process that will get followed to solve the problem. For example, DMAIC or Kaizen.*
-This prediction model will enable developers to handle a given bug and its corresponding priority accordingly. 
+For this reason, we want to distinguish different kinds of bugs by placing in them in different priority categories:
+
+- Critical
+- Blocker
+- Major
+- Minor
+- Trivial
 
 ## Motivation
 
-*"Although in the field of Mining Software Repositories (MSR) there are many promising approaches to predicting, localizing, and triaging bugs, most of them do not consider impacts of each bug on users and developers but rather treat all bugs with equal weighting, excepting a few studies on high impact bugs including security, performance, blocking, and so forth."*
+Bug priority categorization allows for improved delegation of bug resolution amongst developers of different domain expertise.
 
 ## Method
-The above will be achieved through sentiment analysis on the data, and applying a deep neural network in order to classify the different bugs.
-Firstly all textual attributes will be quantified by applying pre-trained sentiment analysis models.
-Next, feature selection will be applied to reduce the dimensionality of the data.
-Lastly a deep neural network will be trained and tested on the given data to form a prediction model.
+
+We will implement a Deep Neural Network to classify the different types of bugs. Different aspects will be taken into account:
+
+- Feature Selection: Reduce the dimensionality of the data.
+
+- Sentiment Analysis: Textual attributes will be quantified by applying sentiment analysis models and, thus, generating new features.
+
+- Hidden Layers: Determine the optimal number of hidden layers, as well as their perceptron quantity and corresponding activation functions.
+
+- Analysis: The model will be applied to all projects; the results will be compared.
 
 ### About The Data
 
@@ -106,4 +111,4 @@ Lastly a deep neural network will be trained and tested on the given data to for
 
 [1] M. Ohira et al., “A dataset of high impact bugs: Manually-classified issue reports,” IEEE Int. Work. Conf. Min. Softw. Repos., vol. 2015–August, pp. 518–521, 2015.
 
-[2] Website: http://oss.sys.wakayama-u.ac.jp/?p=1009
+[2] Open Source Software Engineering Lab, “High Impact Bug Dataset”. 2015. [Online]. Available: http://oss.sys.wakayama-u.ac.jp/?p=1009 [Accessed: 08- Nov- 2017].
