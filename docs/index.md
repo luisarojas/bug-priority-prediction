@@ -1,6 +1,3 @@
----
-title: 
-
 ## Problem Statement
 
 Given any high impact bug, identify its priority.
