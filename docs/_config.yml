@@ -4,4 +4,4 @@ author: Alexandar Mihaylov and Luisa Rojas
 description: This is the description 2
 theme: jekyll-theme-minimal
 url: "http://lrojas12.github.io/bug-priority-prediction/"
-baseurl: "/bug-priority-prediction/"
+baseurl: "/bug-priority-prediction"
