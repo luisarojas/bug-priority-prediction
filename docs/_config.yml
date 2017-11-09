@@ -1,4 +1,7 @@
+title: Bug Priority Prediction
 name: Bug Priority Prediction
 author: Alexandar Mihaylov and Luisa Rojas
-description: This is the description
+description: This is the description 2
 theme: jekyll-theme-minimal
+url: "http://lrojas12.github.io/bug-priority-prediction/"
+baseurl: "/projectname"
