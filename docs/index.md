@@ -46,7 +46,7 @@ These projects were selected because they met the following criteria for project
 
 | Paper | Method |
 |-------|--------|
-| [Automated Identification of High Impact Bug Reports Leveraging Imbalanced Learning Strategies](http://ieeexplore.ieee.org.uproxy.library.dc-uoit.ca/stamp/stamp.jsp?arnumber=7552013&tag=1 "Paper") |  Naive Bayes Multinominal
+| [Automated Identification of High Impact Bug Reports Leveraging Imbalanced Learning Strategies](http://ieeexplore.ieee.org.uproxy.library.dc-uoit.ca/stamp/stamp.jsp?arnumber=7552013&tag=1 "Paper") |  Naive Bayes Multinominal |
 
 ## References
 
