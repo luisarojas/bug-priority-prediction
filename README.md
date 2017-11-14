@@ -28,7 +28,9 @@ A Dataset of High Impact Bugs: Manually-Classified Issue Reports
 
 * *TensorFlow*: https://www.tensorflow.org
 
-## Comments
+## Other
+
+#### Proposal Feedback
 
 Include other work to predict bug priority using this same dataset, then compare with our approach.
 
@@ -36,3 +38,6 @@ Include other work to predict bug priority using this same dataset, then compare
 
 To take into account: Different projects with different predominant bug priority types may be a pitfall.
 
+#### About Deep Learning (Lecture)
+
+[Log Analytics With Deep Learning And Machine Learning](https://hackernoon.com/log-analytics-with-deep-learning-and-machine-learning-20a1891ff70e) article.
