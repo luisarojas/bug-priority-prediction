@@ -19,3 +19,7 @@
   EPOCH: 10000 Cost = 1.356206417083740
   > Accuracy = 61.86007% vs. Random = 19.70990%
 ```
+
+Mention as Future Work or Limits:
+
+The Sentiment Analysis may not take into account technical terms, giving them scores that are not accurate.
