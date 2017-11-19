@@ -20,6 +20,10 @@
   > Accuracy = 61.86007% vs. Random = 19.70990%
 ```
 
-Mention as Future Work or Limits:
+* Mention as Future Work or Limits:
 
-The Sentiment Analysis may not take into account technical terms, giving them scores that are not accurate.
+	The Sentiment Analysis may not take into account technical terms, giving them scores that are not accurate.
+	
+* The model seems to learn to always guess the priority category with the highest percentage - usually "Major". This causes the accuracy to always be as good as the percentage of this category in the data (labels).
+
+* In order to deal with the imbalanced data, we used the following library: http://contrib.scikit-learn.org/imbalanced-learn/stable/over_sampling.html
