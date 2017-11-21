@@ -2,17 +2,53 @@
 
 ### $$ Luisa\space Rojas\space Garcia $$ $$ Alexandar\space Mihaylov $$ $$ CSCI\space 6100G $$
 
+# Problem statement
+Given any high impact bug, automatically identify its priority. 
+
+# Introduction
+Software development and maintenance is a very large factor in the success of demise of a software applications. As such developers heavily depend on other developers or users of the application to submit issues and bug reports. Fixing these issues and bugs is a long and extensive field of Software Engineering and many methods have been developed to aid the process from a bug being reported to resolved. In this work we hope to additionally aid the aforementioned process by automatically categorizing the bugs' priority into one of five categories:
+
+![](../src/resources/images/categories.png)
+
+The automatic categorization will be done with the aid of a deep neural network that has been trained on a dataset of 40 high impact bugs. The features were carefully selected and used to aid the neural network in predicting the priority of the high impact bug. Sentiment analysis will be applied on some of the features in order to quantify them and aid the neural network in predicting the priority. This work also determines the optimal number of hidden layers and their respective perceptron count and corresponding activation functions. Finally we perform analysis on the results and conclude that despite efforts to balance and optimize input features, the data does not hold significant enough information in order to adequately predict the priority of the bug.
+
+# Motivation
+Developer time is a commodity and should be utilized in order to optimize the development and maintenance of software. Bug priority categorization allows for improved delegation of bug resolution amongst developers of different expertise. Given a bug priority of critical, the bug can be delegated to the most experienced developer in order to most adequately deal with the resolution of the bug. Trivial bugs on the other hands can be handed down to developers with lesser experience, but should be resolved nonetheless. The overall goal is to save developer time in resolution of bugs the bug's priority. However if the bug's priority is to be manually discovered, which takes up developer time, then the whole process becomes counter intuitive since the overall goal was to save time. The key is that the discovery of a bug's priority should be done automatically, which if accurately done, directly improves the bug resolution pipeline without intro ducting any trade-off. [1](#test)
+
+
+# Method
+The work in this project can be summarized in the following steps:
+1. Data Collection
+2. Manual Feature Selection
+3. Applying Sentiment Analysis on textual features
+4. Applying selected features to a deep neural network
+5. Handling Imbalanced Data
+6. Optimizing the neural network 
+7. Performing analysis
+8. Conclusions
+9. References
+
+# 1. Data Collection
+The selection of the data is 
+# 2. Manual Feature Selection
+# 3. Applying Sentiment Analysis on textual features
+# 4. Applying selected features to a deep neural network
+# 5. Handling Imbalanced Data
+# 6. Optimizing the neural network 
+# 7. Performing analysis
+# 8. Conclusions
+# 9. References
+<a name="test"></a> Ohira, Masao, et al. "A dataset of high impact bugs: Manually-classified issue reports." Mining Software Repositories (MSR), 2015 IEEE/ACM 12th Working Conference on. IEEE, 2015.
+
+
 ## Dependencies
 
 * `python 3`
-* `scikit-learn`
-* `imblearn`:
-	
-	```
-	conda install -c glemaitre imbalanced-learn
-	```
-	<font color=red>Note: Also state other ways to install or provde the link for more information.</font>
-
+* `tensorflow`: [Installation](https://www.tensorflow.org/install/)
+*  `pandas`: [Installation](https://pandas.pydata.org/pandas-docs/stable/install.html)
+*  `numpy`: [Installation](https://www.scipy.org/scipylib/download.html)
+* `scikit-learn` [Installation](http://scikit-learn.org/stable/install.html)
+* `imblearn`: [Installation](http://contrib.scikit-learn.org/imbalanced-learn/stable/install.html)
 
 ## Work or Limits:
 
@@ -124,3 +160,6 @@ This is because previous to feature manipulation, SMOTE achieved the highest acc
 ## Automatically identifying the most influential features
 
 ## Recall, Precision, and F1
+
+# References
+[Imbalanced-learn: Over Sampling](http://contrib.scikit-learn.org/imbalanced-learn/stable/over_sampling.html)
