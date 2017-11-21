@@ -15,7 +15,6 @@ The automatic categorization will be done with the aid of a deep neural network 
 # Motivation
 Developer time is a commodity and should be utilized in order to optimize the development and maintenance of software. Bug priority categorization allows for improved delegation of bug resolution amongst developers of different expertise. Given a bug priority of critical, the bug can be delegated to the most experienced developer in order to most adequately deal with the resolution of the bug. Trivial bugs on the other hands can be handed down to developers with lesser experience, but should be resolved nonetheless. The overall goal is to save developer time in resolution of bugs the bug's priority. However if the bug's priority is to be manually discovered, which takes up developer time, then the whole process becomes counter intuitive since the overall goal was to save time. The key is that the discovery of a bug's priority should be done automatically, which if accurately done, directly improves the bug resolution pipeline without intro ducting any trade-off. [1](#test)
 
-
 # Method
 The work in this project can be summarized in the following steps:
 1. Data Collection
@@ -28,14 +27,86 @@ The work in this project can be summarized in the following steps:
 8. Conclusions
 9. References
 
+# 1. About the Data
+
+Given any high impact bug, identify its priority.
+
+Methods in research of Software Engineering focus on predicting, localizing, and triaging bugs, but do not consider their impact or weight on the users and on the developers.
+
+For this reason, we want to distinguish different kinds of bugs by placing in them in different priority categories: **Critical**, **Blocker**, **Major**, **Minor**, **Trivial**.
+
+Below are their definitions$^1$:
+
+* Blocker: we can not move forward until this task completed or this bug fixed. Blocker JIRAs block the completion of a design or development iteration, or the releaseof the product.
+    * development or design of a critical component or activity on the project can not move forward until this is resolved.
+    * breaks the build process.
+    * causes the UI to not start up or function at all.
+    * renders an area of finished functionality unusable for most users.
+    * not completed task which is needed for the kernel to function.
+* Critical: this task or issue will most likely be resolved for release.
+    * needed for the next iteration
+    * major browser incompatibility
+    * renders an isolated particular feature completely unusable
+    * affects kernel - front-end communication
+    * major accessibility issue
+    * major security issue
+* Major:(default) Issue should be resolved for release.
+    * majority of bugs and tasks
+    * if unsure, chose this
+* Minor:issue might be resolved for release.
+    * issues and bugs which can be fixed with entry level knowledge
+    * does not affect functionality in any way, presentation may be broken
+* Trivial: issue may or may not be resolved.
+    * this should be for borderline tasks and issues. For that moment when you're not sure whether you should write something up or not.
+
 # 1. Data Collection
-The selection of the data is 
+
+We will work with a large dataset of high impact bugs, which was created by manually reviewing four thousand issue reports in four open source projects (Ambari, Camel, Derby and Wicket). The projects were extracted from JIRA, a platform for managing reported issues.
+
+There are 1000 examples per project; there will be 4000 examples to work with in total.
+
+These projects were selected because they met the following criteria for project selection:
+
+* Target projects have a large number of (at least several thousand) reported issues , which enables the use for prediction model building and/or machine learning.
+
+* Target projects use JIRA as an issue tracking system.
+
+* Target projects are different from each other in application domains.
+
 # 2. Manual Feature Selection
+
+First, the most relevant features are selected manually. The original features included in the dataset were the following:
+
+<center>
+<img src="../src/resources/images/features-in-dataset.png" width="300">
+</center>
+
+However, after careful consideration, only the following columns will be taken into account for further analysis:
+
+<center>
+<img src="../src/resources/images/manual-feature-selection-table.jpg" width="600">
+</center>
+
 # 3. Applying Sentiment Analysis on textual features
+
+[SentiStrength](http://sentistrength.wlv.ac.uk) estimates the strength of positive and negative sentiment in short texts, even for informal language. It has human-level accuracy for short social web texts in English, except political texts. SentiStrength reports two sentiment strengths:
+
+<br><center>$-1$ *(not negative)* to $-5$ *(extremely negative)*</center>
+
+<center>$1$ *(not positive)* to $5$ *(extremely positive)*</center><br>
+
+For this project, they will both be added in order to be used as a new column for data analysis.
+
 # 4. Applying selected features to a deep neural network
 # 5. Handling Imbalanced Data
 # 6. Optimizing the neural network 
 # 7. Performing analysis
+# 7.1. Comparison with other papers
+
+| Paper | Method |
+|-------|--------|
+| [Automated Identification of High Impact Bug<br>Reports Leveraging Imbalanced Learning Strategies](http://ieeexplore.ieee.org.uproxy.library.dc-uoit.ca/stamp/stamp.jsp?arnumber=7552013&tag=1 "Paper") |  Naive Bayes Multinominal |
+
 # 8. Conclusions
 # 9. References
 <a name="test"></a> Ohira, Masao, et al. "A dataset of high impact bugs: Manually-classified issue reports." Mining Software Repositories (MSR), 2015 IEEE/ACM 12th Working Conference on. IEEE, 2015.
@@ -162,4 +233,7 @@ This is because previous to feature manipulation, SMOTE achieved the highest acc
 ## Recall, Precision, and F1
 
 # References
+
+1: https://confluence.ets.berkeley.edu/confluence/display/MYB/JIRA%2C+Definitions
+
 [Imbalanced-learn: Over Sampling](http://contrib.scikit-learn.org/imbalanced-learn/stable/over_sampling.html)
