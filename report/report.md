@@ -29,15 +29,13 @@ The work in this project can be summarized in the following steps:
 
 # 1. About the Data
 
-Given any high impact bug, identify its priority.
-
 Methods in research of Software Engineering focus on predicting, localizing, and triaging bugs, but do not consider their impact or weight on the users and on the developers.
 
 For this reason, we want to distinguish different kinds of bugs by placing in them in different priority categories: **Critical**, **Blocker**, **Major**, **Minor**, **Trivial**.
 
 Below are their definitions$^1$:
 
-* Blocker: we can not move forward until this task completed or this bug fixed. Blocker JIRAs block the completion of a design or development iteration, or the releaseof the product.
+* Blocker: we can not move forward until this task completed or this bug fixed. Blocker JIRAs block the completion of a design or development iteration, or the release of the product.
     * development or design of a critical component or activity on the project can not move forward until this is resolved.
     * breaks the build process.
     * causes the UI to not start up or function at all.
