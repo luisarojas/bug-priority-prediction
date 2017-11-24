@@ -347,7 +347,7 @@ x, y = fetch_data(clean_data_path)
 
 feature_names = ["type", "reporter", "summary", "description", "description_words"]
 
-to_keep = [0, 3] # keeping: type and description
+to_keep = [0, 2, 3] # keeping: type, summary and description
 
 to_delete = np.delete(np.arange(5), to_keep)
 
