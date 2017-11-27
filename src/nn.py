@@ -347,7 +347,7 @@ x, y = fetch_data(clean_data_path)
 
 feature_names = ["type", "reporter", "summary", "description", "description_words"]
 
-to_keep = [0, 2, 3] # keeping: type, summary and description
+to_keep = [0, 2] # keeping: type and summary
 
 to_delete = np.delete(np.arange(5), to_keep)
 
@@ -461,7 +461,7 @@ if (init_perceptrons < total_perceptrons):
     max_acc_index = np.argmax(total_acc)
     max_acc = total_acc[max_acc_index]
     
-    fig_caption = ("Average Accuracy: {:.5f}%".format(avg_acc*100) + "\nMaximum Accuracy: {:.5f}%".format(max_acc*100)
+    fig_caption = ("Average Accuracy: {:.5f}%".format(avg_acc*100) + ", Maximum Accuracy: {:.5f}%".format(max_acc*100)
                    + " with " + str(perceptron_count[max_acc_index]) + " perceptrons")
     title= 'Change of prediction accuracy\nas the number of perceptrons increases'
     file_name = './results/accuracy-perceptrons-' + str(init_perceptrons) + '-to-' + str(total_perceptrons)
