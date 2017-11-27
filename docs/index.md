@@ -1,5 +1,3 @@
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-
 # Project Description
 
 ## Problem Statement
