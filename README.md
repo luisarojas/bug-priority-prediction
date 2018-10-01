@@ -9,13 +9,6 @@ Implementing or solving a problem utilizing a learning algorithm:
 - Present a solution from a new problem.
 - Present a solution from an already existing paper (e.g. same data, different algorithm).
 
-**Proposal**:
-
-- *Presentation*: Due November 9th, 2017
-- *Report*: TBA
-
-## Resources
-
 ### Data Set
 
 A Dataset of High Impact Bugs: Manually-Classified Issue Reports
